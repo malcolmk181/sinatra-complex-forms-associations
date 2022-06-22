@@ -1,1 +1,18 @@
-index.erb
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+
+    <body>
+        <h2>Pets</h2>
+        <ul>
+            <% @pets.each do |pet| %>
+                <li><%= pet.name %></li>
+                <% if !pet.owner.nil? then %>
+                    <ul>
+                        <li>Owner: <%= pet.owner.name %></li>
+                    </ul>
+                <% end %>
+            <% end %>
+        </ul>
+    </body>
+</html>

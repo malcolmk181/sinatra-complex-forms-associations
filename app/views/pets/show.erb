@@ -1,1 +1,19 @@
-show.erb
+<!DOCTYPE html>
+
+<html lang="en">
+    <head></head>
+
+    <body>
+
+        <h1><%=@pet.name%></h1>
+        <% if !@pet.owner.nil? then %>
+            <h4>Owner:</h4>
+            <ul>
+            <li><%=@pet.owner.name%></li>
+            </ul>
+        <% else %>
+            <h4><%= @pet.name %> has no owner.</h4>
+        <% end %>
+    
+    </body>
+</html>
